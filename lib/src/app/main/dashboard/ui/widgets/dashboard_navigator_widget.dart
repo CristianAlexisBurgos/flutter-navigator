@@ -2,10 +2,13 @@ import 'package:app_movil/src/app/main/dashboard/ui/screens/Dahboard_screen.dart
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+final GlobalKey<NavigatorState> dashboardNavigatorKey = GlobalKey();
+
 class DashboardNavigatorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Navigator(
+      key: dashboardNavigatorKey,
       initialRoute: '/',
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {

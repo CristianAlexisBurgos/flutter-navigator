@@ -1,3 +1,5 @@
+import 'package:app_movil/src/app/main/dashboard/ui/widgets/dashboard_navigator_widget.dart';
+import 'package:app_movil/src/app/main/main_navigator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +29,22 @@ class DrawerWidget extends StatelessWidget {
               Navigator.pop(context);
               // Navigator.pushReplacementNamed(context, '/');
               // Navigator.of(context).pushNamed('/');
-              Navigator.pushReplacementNamed(context, '/');
+              // mainNavigatorKey.currentState.pushReplacementNamed('main/');
+              Navigator.pushReplacementNamed(context, 'main/');
+              // Navigator.of(context).pushReplacementNamed('/main');
+            },
+          ),
+          _createDrawerItem(
+            icon: Icons.settings,
+            text: 'Segundo',
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushReplacementNamed(context, '/main/second');
+              // Navigator.of(context).pushNamed('/');
+
+              // mainNavigatorKey.currentState
+              //     .pushReplacementNamed('/main/second');
+              // Navigator.of(context).pushReplacementNamed('/main/second');
             },
           ),
         ],

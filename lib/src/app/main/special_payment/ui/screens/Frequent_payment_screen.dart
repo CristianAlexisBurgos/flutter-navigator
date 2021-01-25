@@ -1,3 +1,5 @@
+import 'package:app_movil/src/shared/ui/widgets/drawer_widget.dart';
+
 import '../widgets/frequent_payment/dynamic_form.widget.dart';
 import '../widgets/frequent_payment/show_frequent_payment_widget.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +16,9 @@ class _FrequentPaymentScreenState extends State<FrequentPaymentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Pagos'),
-      ),
+      // appBar: AppBar(
+      //   title: Text('Pagos'),
+      // ),
       body: Container(
         padding: EdgeInsets.only(left: 10.0, right: 10.0),
         child: Column(
@@ -46,6 +48,7 @@ class _FrequentPaymentScreenState extends State<FrequentPaymentScreen> {
           ),
         ],
       ),
+      // drawer: DrawerWidget(),
     );
   }
 }
